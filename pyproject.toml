@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "flet_icons"
+version = "0.1.0"
+description = "a collection of icons for flutter as flet"
+authors = ["Tai <1174501146@qq.com>"]
+readme = "README.MD"
+license = "Apache-2.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "License :: OSI Approved :: Apache-2.0 License",
+    "Operating System :: OS Independent",
+]
+keywords = ["packaging", "flet", "flet-icon", "flutter", "icon"]
+include = [
+    { path = "images/", format = "sdist"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flet = "^0.1.58"
+pyperclip = "^1.8.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
