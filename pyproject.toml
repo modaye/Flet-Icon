@@ -1,15 +1,15 @@
 [tool.poetry]
 name = "flet_icon"
-version = "0.1.0"
+version = "0.1.1"
 description = "a collection of icons for flutter as flet"
 authors = ["Tai <1174501146@qq.com>"]
 readme = "README.MD"
-license = "Apache-2.0"
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
-    "License :: OSI Approved :: Apache-2.0 License",
+    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
 keywords = ["packaging", "flet", "flet-icon", "flutter", "icon"]
