@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flet_icons"
+name = "flet_icon"
 version = "0.1.0"
 description = "a collection of icons for flutter as flet"
 authors = ["Tai <1174501146@qq.com>"]
