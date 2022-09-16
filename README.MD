@@ -6,7 +6,7 @@
 
 ## Installation
     
-    pip install flet_icons
+    pip install flet_icon
 
 ## Usage
 ```python
