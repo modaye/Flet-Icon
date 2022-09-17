@@ -141,7 +141,7 @@ class Application:
                 text = "icons.%s" % widget.value
                 pyperclip.copy(text)
                 e.page.snack_bar = SnackBar(
-                    Text(f"Copy '%s' to to clipboard" % text,
+                    Text(f"Copy code: %s to clipboard" % text,
                          color="#232323"),
                     bgcolor=self.color()
                 )

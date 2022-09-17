@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "flet_icon"
-version = "0.1.2"
+version = "0.2.1"
 description = "a collection of icons for flutter as flet"
 authors = ["Tai <1174501146@qq.com>"]
-readme = "README.MD"
+readme = "README.md"
 license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -16,10 +16,13 @@ keywords = ["packaging", "flet", "flet-icon", "flutter", "icon"]
 include = [
     { path = "images/", format = "sdist"},
 ]
+[tool.poetry.scripts]
+
+fleticon = "flet_icon:run"
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
-flet = "^0.1.58"
 pyperclip = "^1.8.2"
 
 [tool.poetry.dev-dependencies]
