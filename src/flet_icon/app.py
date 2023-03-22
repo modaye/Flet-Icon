@@ -26,8 +26,7 @@ from flet import (
     TextField,
     Switch
 )
-from flet.padding import Padding
-from flet.control_event import ControlEvent
+from flet_core import Padding, ControlEvent, MainAxisAlignment, CrossAxisAlignment
 
 
 class debounce:  # noqa
@@ -46,22 +45,6 @@ class debounce:  # noqa
         return decorator
 
 
-class Sidebar(UserControl):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs, expand=True)
-        self.menu = Column(
-            auto_scroll=True,
-            width=200,
-        )
-
-    def add(self, *item: Any):
-        self.menu.controls.extend(item)
-        self.update()
-
-    def build(self):
-        return self.menu
-
-
 class SearchApp(UserControl):
     def __init__(self, app: 'Application', max_count: int = 200, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -75,11 +58,11 @@ class SearchApp(UserControl):
             Row([
                 self.text,
                 TextButton(text="Search", on_click=self.on_search),
-            ], alignment="center", vertical_alignment="start", expand=True
+            ], alignment=MainAxisAlignment.CENTER, vertical_alignment=CrossAxisAlignment.START, expand=True
             ),
             self.switch
 
-        ], height=50, alignment="center", vertical_alignment="start")
+        ], height=50, alignment=MainAxisAlignment.CENTER, vertical_alignment=CrossAxisAlignment.START,)
 
     def theme_changed(self, e):
         self.page.theme_mode = "dark" if self.page.theme_mode == "light" else "light"
@@ -163,8 +146,8 @@ class Application:
                         Text("%s" % key, color="#ffffff", visible=False)
                     ],
                         expand=True,
-                        alignment="center",
-                        horizontal_alignment="center",
+                        alignment=MainAxisAlignment.CENTER,
+                        horizontal_alignment=CrossAxisAlignment.CENTER,
                         width=120
                     ), width=200, border=None,
                     bgcolor=self.color(),
@@ -172,7 +155,7 @@ class Application:
                     on_click=self.copy_code
                 )
             )
-            if index % 100 == 0:
+            if index % 20 == 0:
                 self.page.update()
         self.page.update()
 

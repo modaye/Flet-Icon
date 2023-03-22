@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flet_icon"
-version = "0.2.1"
+version = "0.3"
 description = "a collection of icons for flutter as flet"
 authors = ["Tai <1174501146@qq.com>"]
 readme = "README.md"
@@ -24,8 +24,14 @@ fleticon = "flet_icon:run"
 [tool.poetry.dependencies]
 python = "^3.10"
 pyperclip = "^1.8.2"
+flet = "^0.4.2"
 
 [tool.poetry.dev-dependencies]
+
+[[tool.poetry.source]]
+name = "清华源"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
